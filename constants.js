@@ -10,5 +10,6 @@ module.exports.CONSTANTS = {
             PASS: process.env.USER_PASS
         },
         RECEPIENT: process.env.USER_MAIL,
-    }
+    },
+    CRON_PATTERN: process.env.CRON_PATTERN || '0 6 * * 1-7' //Every day at 06:00AM
 }

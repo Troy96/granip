@@ -69,7 +69,7 @@ class ImageController {
     /**
      * Initialize
      */
-    async run() {
+    async start() {
         try {
             const images = await this.fetchImages();
             const imageLink = await this.selectImageToBeSent(images);
