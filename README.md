@@ -16,7 +16,8 @@ Currently the reciepient email is hardcoded to be the user who is sending email.
 TOPIC           //topic to scrape for
 LIMIT           //Optional. Number of results from scraping api
 USER_MAIL       //Email of user who wants to send alerts
-USER_PASS       // Password of above user
+USER_PASS       //Password of above user
+CRON_PATTERN    //Cron pattern for sending image 
 MONGODB_URI      //Your MongoDb Cloud or local
 ```
 
