@@ -1,28 +1,30 @@
 const mailer = require('nodemailer');
+const {CONSTANTS} = require('../constants');
 
 class EmailController {
     
     constructor() {
         
         this.transporter = mailer.createTransport({
-            service: '',
+            service: CONSTANTS.EMAIL.SERVICE,
             auth: {
-                user: '',
-                pass: ''
+                user: CONSTANTS.EMAIL.FROM.USER,
+                pass: CONSTANTS.EMAIL.FROM.PASS
             }
         });
     
     }
 
-    async send(to, subject, body) {
+    async send(to, subject, body, attachments) {
         const options = {
-            from: '',
+            from: CONSTANTS.EMAIL.FROM,
             to,
             subject,
-            html: body
+            html: body,
+            attachments
         }
         this.transporter.sendMail(options, (e, info) => {
-            if (err) throw new Error(err);
+            if (e) throw new Error(e);
             console.log('Email sent' + info.response);
         });
     }

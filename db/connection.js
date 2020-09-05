@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Granip', {
+mongoose.connect('mongodb://localhost:27017/Granip', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
@@ -10,6 +10,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Granip', 
 
 const db = mongoose.connection;
 
-db.on('error', ()=> {
+db.on('error', e => {
     throw new Error('> DATABASE NOT CONNECTED. CHECK CONNECTION');
 });

@@ -18,7 +18,7 @@ class ScraperController {
             const results = await this.google.scrape(topic, limit);
             return results;
         } catch (err) {
-
+            throw new Error(err)
         }
     }
 
