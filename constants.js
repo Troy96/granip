@@ -6,9 +6,9 @@ module.exports.CONSTANTS = {
     EMAIL: {
         SERVICE: 'gmail',
         FROM: {
-            USER: process.env.USER,
-            PASS: process.env.PASS
+            USER: process.env.USER_MAIL,
+            PASS: process.env.USER_PASS
         },
-        RECEPIENT: process.env.USER,
+        RECEPIENT: process.env.USER_MAIL,
     }
 }

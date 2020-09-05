@@ -4,5 +4,5 @@ require('./db/connection');
 const { ImageController } = require('./controllers/ImageController');
 
 const imageController = new ImageController();
-imageController.initialize();
+imageController.run();
 
