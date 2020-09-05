@@ -17,6 +17,7 @@ TOPIC           //topic to scrape for
 LIMIT           //Optional. Number of results from scraping api
 USER_MAIL       //Email of user who wants to send alerts
 USER_PASS       // Password of above user
+MONGODB_URI      //Your MongoDb Cloud or local
 ```
 
 ### Author
