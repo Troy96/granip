@@ -2,7 +2,11 @@ const Scraper = require('images-scraper');
 
 class ScraperController {
 
-    google = new Scraper({});
+    google = new Scraper({
+        puppeteer: {
+          headless: true,
+        }
+      });
 
     constructor() {
     }
