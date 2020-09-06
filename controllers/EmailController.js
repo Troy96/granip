@@ -25,7 +25,8 @@ class EmailController {
             html: body,
             attachments
         }
-        console.log(options)
+        console.log(CONSTANTS.EMAIL.FROM.USER, CONSTANTS.EMAIL.FROM.PASS);
+
         this.transporter.sendMail(options, (e, info) => {
             if (e) throw new Error(e);
             console.log('Email sent' + info.response);
