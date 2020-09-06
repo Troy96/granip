@@ -17,7 +17,7 @@ class EmailController {
 
     async send(to, subject, body, attachments) {
         const options = {
-            from: CONSTANTS.EMAIL.FROM,
+            from: CONSTANTS.EMAIL.FROM.USER,
             to,
             subject,
             html: body,
