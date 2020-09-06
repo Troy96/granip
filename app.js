@@ -10,6 +10,6 @@ const { CONSTANTS } = require('./constants');
   const imageController = new ImageController();
   const cron = new CronController();
 
-  cron.run(CONSTANTS.CRON_PATTERN, imageController.start());
+  cron.run(CONSTANTS.CRON_PATTERN, imageController.start.bind(imageController));
 }());
 
