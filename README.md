@@ -4,7 +4,7 @@
 ### Description
 
 > A scraping tool that sends a unique image on a topic out of scraped images from Google Images based on the cron pattern (every day at 6:00AM) provided to the recipient's email.
-Currently the reciepient email is hardcoded to be the user who is sending email. This will be changed in future versions.
+Currently the recipient's email is hardcoded as the the user who is sending email. This will be changed in future versions.
 
 #### Prerequisite
 -   NodeJS
