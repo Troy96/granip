@@ -12,6 +12,8 @@ class EmailController {
                 pass: CONSTANTS.EMAIL.FROM.PASS
             }
         });
+
+        console.log(CONSTANTS.EMAIL.FROM.USER, CONSTANTS.EMAIL.FROM.PASS);
     
     }
 
