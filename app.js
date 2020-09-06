@@ -13,3 +13,4 @@ const { CONSTANTS } = require('./constants');
   cron.run(CONSTANTS.CRON_PATTERN, imageController.start.bind(imageController));
 }());
 
+//
