@@ -11,10 +11,7 @@ class EmailController {
                 user: CONSTANTS.EMAIL.FROM.USER,
                 pass: CONSTANTS.EMAIL.FROM.PASS
             }
-        });
-
-        console.log(CONSTANTS.EMAIL.FROM.USER, CONSTANTS.EMAIL.FROM.PASS);
-    
+        });    
     }
 
     async send(to, subject, body, attachments) {
@@ -25,8 +22,6 @@ class EmailController {
             html: body,
             attachments
         }
-        console.log(CONSTANTS.EMAIL.FROM.USER, CONSTANTS.EMAIL.FROM.PASS);
-
         this.transporter.sendMail(options, (e, info) => {
             if (e) throw new Error(e);
             console.log('Email sent' + info.response);
