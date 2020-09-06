@@ -23,6 +23,7 @@ class EmailController {
             html: body,
             attachments
         }
+        console.log(options)
         this.transporter.sendMail(options, (e, info) => {
             if (e) throw new Error(e);
             console.log('Email sent' + info.response);
