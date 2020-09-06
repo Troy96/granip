@@ -5,10 +5,7 @@ class ScraperController {
     google = new Scraper({
         puppeteer: {
           headless: true,
-          args: [
-            'no-sandbox',
-            'disable-setuid-sandbox',
-          ]
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
         }
       });
 
